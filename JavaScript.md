@@ -4,7 +4,7 @@
 
 ## 1.异步编程
 
-###1.1.实现Promise.limit()，实现对promise数组的限制运行
+### 1.1.实现Promise.limit()，实现对promise数组的限制运行
 
 ```javascript
 class LimitPromise {
@@ -375,7 +375,7 @@ ajax({
 
 ## 2.框架
 
-###2.1.你能写一下Vue的双向绑定吗？
+### 2.1.你能写一下Vue的双向绑定吗？
 
 ```html
 <!DOCTYPE html>
@@ -474,7 +474,7 @@ ajax({
    [《深度剖析：如何实现一个 Virtual DOM 算法》](https://github.com/livoras/blog/issues/13)
    [《网上都说操作真实 DOM 慢，但测试结果却比 React 更快，为什么？》](https://www.zhihu.com/question/31809713/answer/53544875)
 
-###2.5.如何比较两个 DOM 树的差异？
+### 2.5.如何比较两个 DOM 树的差异？
 
    ```
     两个树的完全 diff 算法的时间复杂度为 O(n^3) ，但是在前端中，我们很少会跨层级的移动元素，所以我们只需要比较同一层级的元素进行比较，这样就可以将算法的时间复杂度降低为 O(n)。
@@ -484,7 +484,7 @@ ajax({
     在对列表元素进行对比的时候，由于 TagName 是重复的，所以我们不能使用这个来对比。我们需要给每一个子节点加上一个 key，列表对比的时候使用 key 来进行比较，这样我们才能够复用老的 DOM 树上的节点。
    ```
 
-###2.6. vue 双向数据绑定原理？
+### 2.6. vue 双向数据绑定原理？
 
    ```
     vue 通过使用双向数据绑定，来实现了 View 和 Model 的同步更新。vue 的双向数据绑定主要是通过使用数据劫持和发布订阅者模式来实现的。
@@ -502,7 +502,7 @@ ajax({
    详细资料可以参考：
    [《Vue.js 双向绑定的实现原理》](http://www.cnblogs.com/kidney/p/6052935.html?utm_source=gold_browser_extension)
 
-###2.7. Object.defineProperty 介绍？
+### 2.7. Object.defineProperty 介绍？
 
    ```
     Object.defineProperty 函数一共有三个参数，第一个参数是需要定义属性的对象，第二个参数是需要定义的属性，第三个是该属性描述符。
@@ -513,19 +513,19 @@ ajax({
    详细资料可以参考：
    [《Object.defineProperty()》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
-###2.8.使用 Object.defineProperty() 来进行数据劫持有什么缺点？
+### 2.8.使用 Object.defineProperty() 来进行数据劫持有什么缺点？
 
    ```
     有一些对属性的操作，使用这种方法无法拦截，比如说通过下标方式修改数组数据或者给对象新增属性，vue 内部通过重写函数解决了这个问题。在 Vue3.0 中已经不使用这种方式了，而是通过使用 Proxy 对对象进行代理，从而实现数据劫持。使用 Proxy 的好处是它可以完美的监听到任何方式的数据改变，唯一的缺点是兼容性的问题，因为这是 ES6 的语法。
    ```
 
-###2.9.Vue 的生命周期是什么？
+### 2.9.Vue 的生命周期是什么？
 
    ```
     Vue 的生命周期指的是组件从创建到销毁的一系列的过程，被称为 Vue 的生命周期。通过提供的 Vue 在生命周期各个阶段的钩子函数，我们可以很好的在 Vue 的各个生命阶段实现一些操作。
    ```
 
-###2.10.Vue 的各个生命阶段是什么？
+### 2.10.Vue 的各个生命阶段是什么？
 
    ```
     Vue 一共有8个生命阶段，分别是创建前、创建后、加载前、加载后、更新前、更新后、销毁前和销毁后，每个阶段对应了一个生命周期的钩子函数。
@@ -553,7 +553,7 @@ ajax({
    [《vue 生命周期深入》](https://juejin.im/entry/5aee8fbb518825671952308c)
    [《Vue 实例》](https://cn.vuejs.org/v2/guide/instance.html)
 
-###2.11. Vue 组件间的参数传递方式？
+### 2.11. Vue 组件间的参数传递方式？
 
    ```
     （1）父子组件间通信
@@ -581,7 +581,7 @@ ajax({
    详细资料可以参考：
    [《VUE 组件之间数据传递全集》](https://juejin.im/entry/5ba215ac5188255c6d0d8345)
 
-###2.12.computed 和 watch 的差异？
+### 2.12.computed 和 watch 的差异？
 
    ```
     （1）computed 是计算一个新的属性，并将该属性挂载到 Vue 实例上，而 watch 是监听已经存在且已挂载到 Vue 实例上的数据，所以用 watch 同样可以监听 computed 计算属性的变化。
@@ -597,7 +597,7 @@ ajax({
 
 [计算属性和侦听器](https://cn.vuejs.org/v2/guide/computed.html)
 
-###2.13. vue-router 中的导航钩子函数
+### 2.13. vue-router 中的导航钩子函数
 
    ```
     （1）全局的钩子函数 beforeEach 和 afterEach
@@ -612,13 +612,13 @@ ajax({
    详细资料可以参考：
    [《导航守卫》](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AE%88%E5%8D%AB)
 
-###2.14.\$route  和  \$router 的区别？
+### 2.14.\$route  和  \$router 的区别？
 
    ```
     $route 是“路由信息对象”，包括 path，params，hash，query，fullPath，matched，name 等路由信息参数。而 $router 是“路由实例”对象包括了路由的跳转方法，钩子函数等。
    ```
 
-###2.15. vue 常用的修饰符？
+### 2.15. vue 常用的修饰符？
 
    ```
     .stop: 阻止单击事件冒泡
@@ -631,7 +631,7 @@ ajax({
 						 注意：使用.native修饰符来操作普通HTML标签是会令事件失效的
    ```
 
-###2.16. vue中 key 值的作用？
+### 2.16. vue中 key 值的作用？
 
    ```
     vue 中 key 值的作用可以分为两种情况来考虑。
@@ -646,13 +646,13 @@ ajax({
    [《Vue2.0 v-for 中 :key 到底有什么用？》](https://www.zhihu.com/question/61064119)
    [《vue 中 key 的作用》](https://www.cnblogs.com/RainyBear/p/8563101.html)
 
-###2.17. keep-alive 组件有什么作用？
+### 2.17. keep-alive 组件有什么作用？
 
    ```
     如果你需要在组件切换的时候，保存一些组件的状态防止多次渲染，就可以使用 keep-alive 组件包裹需要保存的组件。
    ```
 
-###2.18.vue 中 mixin 和 mixins 区别？
+### 2.18.vue 中 mixin 和 mixins 区别？
 
    ```
      mixin 用于全局混入，会影响到每个组件实例。
@@ -680,7 +680,7 @@ ajax({
 [《HTTP cookies》 ](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
 [《聊一聊 cookie》 ](https://segmentfault.com/a/1190000004556040)
 
-###3.2.客户端和服务器怎么维持登录态
+### 3.2.客户端和服务器怎么维持登录态
 
 HTTP协议与状态保持
 
@@ -704,7 +704,7 @@ session机制采用的是在服务器端保持状态的方案。
 token,登录成功获取token，以后每个请求都要带上token
 ```
 
-### 3.3.cookie是每次请求都会发送给服务器吗
+  3.3.cookie是每次请求都会发送给服务器吗
 
 ```
 不会，因为服务器设置cookie时会指定其domain和path，只有请求相应的域时才会带上cookie
@@ -777,7 +777,7 @@ token,登录成功获取token，以后每个请求都要带上token
    [《跨域，你需要知道的全在这里》](https://juejin.im/entry/59feae9df265da43094488f6)
    [《为什么 form 表单提交没有跨域问题，但 ajax 提交有跨域问题？》](https://www.zhihu.com/question/31592553)
 
-###4.3.你说的跨域资源共享(CORS)是怎么用的呢
+### 4.3.你说的跨域资源共享(CORS)是怎么用的呢
 
 [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 
@@ -811,7 +811,7 @@ token,登录成功获取token，以后每个请求都要带上token
 2)函数提升优先于变量提升，函数提升会把整个函数挪到作用域顶部，变量提升会把变量声明挪到作用域顶部。
 ```
 
-###5.3.作用域链
+### 5.3.作用域链
 
 ```
 要得到一个变量的值，若当前作用域没有定义，就到父级作用域寻找。如果父级作用域中也没找到，就再向上一层去寻找，直到找到全局作用域。这种一层一层的关系，就是作用域链
@@ -927,7 +927,7 @@ token,登录成功获取token，以后每个请求都要带上token
    [《Javascript 事件模型系列（一）事件及事件的三种模型》](https://www.cnblogs.com/lvdabao/p/3265870.html)
    [《Javascript 事件模型：事件捕获和事件冒泡》](https://blog.csdn.net/wuseyukui/article/details/13771493)
 
-###6.3. 三种事件模型是什么？
+### 6.3. 三种事件模型是什么？
 
    ```
     事件是用户操作网页时发生的交互动作或者网页本身的一些操作，现代浏览器一共有三种事件模型。
@@ -942,7 +942,7 @@ token,登录成功获取token，以后每个请求都要带上token
    详细资料可以参考：
    [《一个 DOM 元素绑定多个事件时，先执行冒泡还是捕获》](https://blog.csdn.net/u013217071/article/details/77613706)
 
- ###6.4.事件委托是什么
+ ### 6.4.事件委托是什么
 
    ```
     事件委托本质上是利用了浏览器事件冒泡的机制。因为事件在冒泡过程中会上传到父节点，并且父节点可以通过事件对象获取到目标节点，因此可以把子节点的监听函数定义在父节点上，由父节点的监听函数统一处理多个子元素的事件，这种方式称为事件代理。
@@ -1004,7 +1004,7 @@ setInterval(debounce(fn,500),1000) // 第一次在1500ms后触发，之后每100
 setInterval(debounce(fn,2000),1000) // 不会触发一次（我把函数防抖看出技能读条，如果读条没完成就用技能，便会失败而且重新读条）
 ```
 
-###8.2.节流throttle
+### 8.2.节流throttle
 
 函数节流：当持续触发事件时，保证一定时间段内只调用一次事件处理函数。节流通俗解释就比如我们水龙头放水，阀门一打开，水哗哗的往下流，秉着勤俭节约的优良传统美德，我们要把水龙头关小点，最好是如我们心意按照一定规律在某个时间间隔内一滴一滴的往下滴。如下图，持续触发scroll事件时，并不立即执行handle函数，每隔1000毫秒才会执行一次handle函数
 
@@ -1192,7 +1192,7 @@ setInterval(throttle(fn,1000),10)
 
  [《JS 模块加载器加载原理是怎么样的？》](https://www.zhihu.com/question/21157540)
 
-###9.7谈谈你对 webpack 的看法
+### 9.7谈谈你对 webpack 的看法
 
    ```
     我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源数。
@@ -1337,7 +1337,7 @@ setInterval(throttle(fn,1000),10)
    [《浅谈前端路由》 ](https://github.com/kaola-fed/blog/issues/137)
    [《前端路由是什么东西？》](https://www.zhihu.com/question/53064386)
 
-###10.7.js的执行过程和浏览器渲染过程
+### 10.7.js的执行过程和浏览器渲染过程
 
 渲染过程
 
@@ -1438,7 +1438,7 @@ Event Loop是javascript的执行机制
      还有一些方式，比如使用 CSP ，CSP 的本质是建立一个白名单，告诉浏览器哪些外部资源可以加载和执行，从而防止恶意代码的注入攻击。
     
      还可以对一些敏感信息进行保护，比如 cookie 使用 http-only ，使得脚本无法获取。也可以使用验证码，避免脚本伪装成用户执行一些操作。
-###11.2. 什么是 CSP？
+### 11.2. 什么是 CSP？
 
    ```
   CSP 指的是内容安全策略，它的本质是建立一个白名单，告诉浏览器哪些外部资源可以加载和执行。我们只需要配置规则，如何拦截由浏览器自己来实现。
@@ -1449,7 +1449,7 @@ Event Loop是javascript的执行机制
    [《内容安全策略（CSP）》](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP) 
    [《前端面试之道》](https://juejin.im/book/5bdc715fe51d454e755f75ef/section/5bdc721851882516c33430a2)
 
-###11.3. 什么是 CSRF 攻击？如何防范 CSRF 攻击？
+### 11.3. 什么是 CSRF 攻击？如何防范 CSRF 攻击？
 
    ```
      CSRF 攻击指的是跨站请求伪造攻击，攻击者诱导用户进入一个第三方网站，然后该网站向被攻击网站发送跨站请求。如果用户在被攻击网站中保存了登录状态，那么攻击者就可以利用这个登录状态，绕过后台的用户验证，冒充用户向服务器执行一些操作。
@@ -1482,7 +1482,7 @@ Event Loop是javascript的执行机制
    [《前端安全系列之二：如何防止 CSRF 攻击？》](https://juejin.im/post/5bc009996fb9a05d0a055192)
    [《[ HTTP 趣谈] origin, referer 和 host 区别》](https://www.jianshu.com/p/1f9c71850299)
 
-###11.4. 什么是 Samesite Cookie 属性？
+### 11.4. 什么是 Samesite Cookie 属性？
 
    ```
     Samesite Cookie 表示同站 cookie，避免 cookie 被第三方所利用。
@@ -1494,7 +1494,7 @@ Event Loop是javascript的执行机制
     使用这种方法的缺点是，因为它不支持子域，所以子域没有办法与主域共享登录信息，每次转入子域的网站，都回重新登录。还有一个问题就是它的兼容性不够好。
    ```
 
-###11.5. 什么是点击劫持？如何防范点击劫持？
+### 11.5. 什么是点击劫持？如何防范点击劫持？
 
    ```
     点击劫持是一种视觉欺骗的攻击手段，攻击者将需要攻击的网站通过 iframe 嵌套的方式嵌入自己的网页中，并将 iframe 设置为透明，在页面中透出一个按钮诱导用户点击。
@@ -1505,7 +1505,7 @@ Event Loop是javascript的执行机制
    详细资料可以参考：
    [《web 安全之--点击劫持攻击与防御技术简介》](https://www.jianshu.com/p/251704d8ff18)
 
-###11.6.SQL 注入攻击？
+### 11.6.SQL 注入攻击？
 
    ```
     SQL 注入攻击指的是攻击者在 HTTP 请求中注入恶意的 SQL 代码，服务器使用参数构建数据库 SQL 命令时，恶意 SQL 被一起构造，破坏原有 SQL 结构，并在数据库中执行，达到编写程序时意料之外结果的攻击行为。
@@ -1517,31 +1517,31 @@ Event Loop是javascript的执行机制
 
 ## 12.模式
 
-###12.1.单例模式是什么？
+### 12.1.单例模式是什么？
 
    ```
     单例模式保证了全局只有一个实例来被访问。比如说常用的如弹框组件的实现和全局状态的实现。
    ```
 
-###12.2.策略模式是什么？
+### 12.2.策略模式是什么？
 
    ```
     策略模式主要是用来将方法的实现和方法的调用分离开，外部通过不同的参数可以调用不同的策略。我主要在 MVP 模式解耦的时候用来将视图层的方法定义和方法调用分离。
    ```
 
-###12.3.代理模式是什么？
+### 12.3.代理模式是什么？
 
    ```
     代理模式是为一个对象提供一个代用品或占位符，以便控制对它的访问。比如说常见的事件代理。
    ```
 
-###12.4.中介者模式是什么？
+### 12.4.中介者模式是什么？
 
    ```
     中介者模式指的是，多个对象通过一个中介者进行交流，而不是直接进行交流，这样能够将通信的各个对象解耦。
    ```
 
-###12.5.适配器模式是什么？
+### 12.5.适配器模式是什么？
 
    ```
     适配器用来解决两个接口不兼容的情况，不需要改变已有的接口，通过包装一层的方式实现两个接口的正常协作。假如我们需要一种新的接口返回方式，但是老的接口由于在太多地方已经使用了，不能随意更改，这个时候就可以使用适配器模式。比如我们需要一种自定义的时间返回格式，但是我们又不能对 js 时间格式化的接口进行修改，这个时候就可以使用适配器模式。
@@ -1552,7 +1552,7 @@ Event Loop是javascript的执行机制
    [《JavaScript 设计模式》](https://juejin.im/post/59df4f74f265da430f311909#heading-3)
    [《JavaScript 中常见设计模式整理》](https://juejin.im/post/5afe6430518825428630bc4d)
 
-###12.6. 观察者模式和发布订阅模式有什么不同？
+### 12.6. 观察者模式和发布订阅模式有什么不同？
 
    ```
     发布订阅模式其实属于广义上的观察者模式
@@ -1662,7 +1662,7 @@ var events = (function () {
 ```
 ## 13.网络
 
-###13.1.一次http请求的过程
+### 13.1.一次http请求的过程
 
 
 
@@ -1903,7 +1903,7 @@ function curry(fn, ...args) {
   return fn.length <= args.length ? fn(...args) : curry.bind(null, fn, ...args);
 }
 ```
-###3.Object.is() 与原来的比较操作符 “===”、“==” 的区别
+### 3.Object.is() 与原来的比较操作符 “===”、“==” 的区别
 
     使用双等号进行相等判断时，如果两边的类型不一致，则会进行强制类型转化后再进行比较。
     
@@ -1938,7 +1938,7 @@ function curry(fn, ...args) {
    [《什么是 Event Loop？》](http://www.ruanyifeng.com/blog/2013/10/event_loop.html)
    [《这一次，彻底弄懂 JavaScript 执行机制》](https://juejin.im/post/59e85eebf265da430d571f89)
 
-###6.为什么 0.1 + 0.2 != 0.3？如何解决这个问题？
+### 6.为什么 0.1 + 0.2 != 0.3？如何解决这个问题？
 
    ```
     当计算机计算 0.1+0.2 的时候，实际上计算的是这两个数字在计算机里所存储的二进制，0.1 和 0.2 在转换为二进制表示的时候会出现位数无限循环的情况。js 中是以 64 位双精度格式来存储数字的，只有 53 位的有效数字，超过这个长度的位数会被截取掉
@@ -1957,7 +1957,7 @@ function curry(fn, ...args) {
    [《0.1+0.2 !== 0.3？》](https://juejin.im/post/5bd2f10a51882555e072d0c4)
    [《JavaScript 中奇特的~运算符》](https://juejin.im/entry/59cdd7fb6fb9a00a600f8eef)
 
-###7.原码、反码和补码的介绍
+### 7.原码、反码和补码的介绍
 
    ```
      原码是计算机中对数字的二进制的定点表示方法，最高位表示符号位，其余位表示数值位。优点是易于分辨，缺点是不能够直接参与运算。
@@ -1977,7 +1977,7 @@ function curry(fn, ...args) {
    详细资料可以参考：
    [《关于2的补码》](http://www.ruanyifeng.com/blog/2009/08/twos_complement.html)
 
-###8.toPrecision 和 toFixed 和 Math.round 、ceil、floor？
+### 8.toPrecision 和 toFixed 和 Math.round 、ceil、floor？
 
    ```
     toPrecision 用于处理精度，精度是从左至右第一个不为 0 的数开始数起。
@@ -1987,7 +1987,7 @@ function curry(fn, ...args) {
     Math.floor() === 向下取整，函数返回一个小于或等于给定数字的最大整数
    ```
 
-###9.js中命名规则
+### 9.js中命名规则
 
 ```
 （1）第一个字符必须是字母、下划线（_）或美元符号（$）
@@ -1996,31 +1996,31 @@ function curry(fn, ...args) {
 一般我们推荐使用驼峰法来对变量名进行命名，因为这样可以与 ECMAScript 内置的函数和对象命名格式保持一致。
 ```
 
-###10.如何获取一个元素相对于浏览器窗口左上角的位置
+### 10.如何获取一个元素相对于浏览器窗口左上角的位置
 
 ```
   可以利用Dom元素上的getBoundingClientRect()方法，该方法直接返回一个对象，可以拿到距离浏览器的距离
 ```
 
-###11.[-4,-3,0,0,0,6,2,3]这样一个有规律的数列，0的左边都是负数，0的右边都是整数，要求找到与0相邻的正数和负数（-3,6），要求复杂度为log n
+### 11.[-4,-3,0,0,0,6,2,3]这样一个有规律的数列，0的左边都是负数，0的右边都是整数，要求找到与0相邻的正数和负数（-3,6），要求复杂度为log n
 
 ```
 采用两次二分查找找出整数和负数
 ```
 
-###12.怎么判断一个数组
+### 12.怎么判断一个数组
 
 ```
 Array.isArray，instance of，Object.prototype.toString.call(arr)
 ```
 
-###13.实现一个合并数组的方法，使其合并后的数组仍是有序的
+### 13.实现一个合并数组的方法，使其合并后的数组仍是有序的
 
 ```
 利用双指针，每次比较指针的位置，当一个指针完时，将另一个数组直接添加到结果数组之后即可（此处拓展了一下数组的concat和slice方法
 ```
 
-###14.[1,2,3].map(parseInt)的结果
+### 14.[1,2,3].map(parseInt)的结果
 
     parseInt() 函数能解析一个字符串，并返回一个整数，需要两个参数 (val, radix)，其中 radix 表示要解析的数字的基数。（该值介于 2 ~ 36 之间，并且字符串中的数字不能大于 radix 才能正确返回数字结果值）。
     
@@ -2041,7 +2041,7 @@ Array.isArray，instance of，Object.prototype.toString.call(arr)
     可以改为r = arr.map(Number);，因为Number(value)函数仅接收一个参数。
 [《为什么 ["1", "2", "3"].map(parseInt) 返回 [1,NaN,NaN]？》](https://blog.csdn.net/justjavac/article/details/19473199)
 
-###15.array reduce 实现 filter
+### 15.array reduce 实现 filter
 
 ```javascript
 Array.prototype._filter = function (fn) {
@@ -2067,7 +2067,7 @@ Array.prototype._filter = function (fn) {
 
 [reduce实现filter](http://js.jsrun.net/ywyKp/edit)
 
-###16.instanceof 的作用？
+### 16.instanceof 的作用？
 
    ```js
     instanceof 运算符用于判断构造函数的 prototype 属性是否出现在对象的原型链中的任何位置。
@@ -2090,7 +2090,7 @@ Array.prototype._filter = function (fn) {
 
  [《instanceof》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
 
-###17.Set 和 WeakSet 、Map 和 WeakMap 结构？
+### 17.Set 和 WeakSet 、Map 和 WeakMap 结构？
 
    ```
 （1）ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
@@ -2184,7 +2184,7 @@ function deepCopy(object) {
 [《JavaScript 专题之深浅拷贝》](https://github.com/mqyqingfeng/Blog/issues/32)
 [《前端面试之道》](https://juejin.im/book/5bdc715fe51d454e755f75ef/section/5bed40d951882545f73004f6)
 
-###20.Js 动画与 CSS 动画区别及相应实现
+### 20.Js 动画与 CSS 动画区别及相应实现
 
     CSS3 的动画的优点
     
@@ -2197,7 +2197,7 @@ function deepCopy(object) {
     兼容性不好
     
     JavaScript 的动画正好弥补了这两个缺点，控制能力很强，可以单帧的控制、变换，同时写得好完全可以兼容 IE6，并且功能强大。对于一些复杂控制的动画，使用 javascript 会比较靠谱。而在实现一些小的交互动效的时候，就多考虑考虑 CSS 吧
-###21.get 请求传参长度的误区
+### 21.get 请求传参长度的误区
 
    ```
     误区：我们经常说 get 请求参数的大小存在限制，而 post 请求的参数大小是无限制的。
@@ -2210,7 +2210,7 @@ function deepCopy(object) {
     （4）要支持 IE，则最大长度为 2083byte，若只支持 Chrome，则最大长度 8182byte
    ```
 
-###22.get 和 post 请求在缓存方面的区别
+### 22.get 和 post 请求在缓存方面的区别
 
    相关知识点：
 
@@ -2302,7 +2302,7 @@ max-age表示缓存的时间是315360000秒（10年），public表示可以被�
 
 [彻底弄懂强缓存与协商缓存](https://www.jianshu.com/p/9c95db596df5)
 
-###26.进程与线程的区别
+### 26.进程与线程的区别
 
 ```
 进程是资源分配的最小单位，线程是CPU调度的最小单位
@@ -2331,7 +2331,7 @@ max-age表示缓存的时间是315360000秒（10年），public表示可以被�
 
 [JS new的时候发生了什么](https://www.jianshu.com/p/9bf81eea03b2)
 
-###28.DNS是什么
+### 28.DNS是什么
 
 概念
 
@@ -2360,7 +2360,7 @@ DNS 的全称是 Domain Name System 或者 Domain Name Service，它主要的作
 
 [面试官:讲讲DNS的原理](https://zhuanlan.zhihu.com/p/79350395?utm_source=ZHShareTargetIDMore)
 
-###28.cdn是什么
+### 28.cdn是什么
 
 ```
 CDN是将源站内容分发至最接近用户的节点，使用户可就近取得所需内容，提高用户访问的响应速度和成功率。解决因分布、带宽、服务器性能带来的访问延迟问题，适用于站点加速、点播、直播等场景。
@@ -2429,7 +2429,7 @@ TCP还设有一个保活计时器，显然，客户端如果出现故障，服�
 
 
 
-###flex实现圣杯布局(即上下固定，中间自适应，左右固定，中间自适应)
+### flex实现圣杯布局(即上下固定，中间自适应，左右固定，中间自适应)
 
 ```
 利用flex: 0 100px来设置一个固定大小，flex:1来实现自适应大小。上下固定时将flex-direction设置为column即可
@@ -2437,9 +2437,9 @@ TCP还设有一个保活计时器，显然，客户端如果出现故障，服�
 
 
 
-###移动端的项目和pc端的不同
+### 移动端的项目和pc端的不同
 
-###不使用setTimeout/setInterval等js的api，实现每隔一秒输出数组的一个元素
+### 不使用setTimeout/setInterval等js的api，实现每隔一秒输出数组的一个元素
 
 
 
